@@ -3,7 +3,7 @@ my_packages<-c("gridExtra","lubridate","ggplot2","ggpubr","here","stringr")
 lapply(my_packages,require,character.only=TRUE);rm(my_packages)
 
 #Path for files import
-path<-"C:/YourPathTo/wizard_settings/TMY/ssp245"
+path<-"C:/YourPathTo/wizard_settings/TMY"
 setwd(path)
 
 #Files names list
@@ -110,4 +110,5 @@ library(openxlsx)
 # Chemin complet où tu veux sauver le fichier
 save_path <-"C:/YourPathTo/wizard_settings/TMY/wizardsTMY.xlsx"
 write.xlsx(wizards, file = save_path, rowNames = TRUE)
+
 
