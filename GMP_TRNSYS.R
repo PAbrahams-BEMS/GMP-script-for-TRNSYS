@@ -108,5 +108,6 @@ print(wizards)
 #Print parameters results in .xls file
 library(openxlsx)
 # Chemin complet où tu veux sauver le fichier
-save_path <-"C:/YourPathTo/wizard_settings/TMY/wizardsTMY245.xlsx"
+save_path <-"C:/YourPathTo/wizard_settings/TMY/wizardsTMY.xlsx"
 write.xlsx(wizards, file = save_path, rowNames = TRUE)
+
