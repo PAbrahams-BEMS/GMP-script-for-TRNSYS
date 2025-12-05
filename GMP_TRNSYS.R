@@ -3,7 +3,7 @@ my_packages<-c("gridExtra","lubridate","ggplot2","ggpubr","here","stringr")
 lapply(my_packages,require,character.only=TRUE);rm(my_packages)
 
 #Path for files import
-path<-"C:/Users/BEMS/OneDrive - Universite de Liege/Documents/1_Thèse/Rstudio/wizard_settings/TMY/ssp245"
+path<-"C:/YourPathTo/wizard_settings/TMY/ssp245"
 setwd(path)
 
 #Files names list
@@ -21,7 +21,7 @@ for(i in 1:length(meteodata)){
   colnames(meteodata[[i]])[1]<-"TIME"}
 
 #ConversionDateTRNSYS import
-conversionDateTRNSYS <- read.csv("~/1_Thèse/Donnees_meteo/conversionDateTRNSYS.csv",header=T,sep=";")
+conversionDateTRNSYS <- read.csv("YourPathTo/conversionDateTRNSYS.csv",header=T,sep=";")
 conversionDateTRNSYS<-conversionDateTRNSYS[-c(8762:8904),]
 
 
@@ -108,5 +108,5 @@ print(wizards)
 #Print parameters results in .xls file
 library(openxlsx)
 # Chemin complet où tu veux sauver le fichier
-save_path <-"C:/Users/BEMS/OneDrive - Universite de Liege/Documents/1_Thèse/Rstudio/wizard_settings/TMY/wizardsTMY245.xlsx"
+save_path <-"C:/YourPathTo/wizard_settings/TMY/wizardsTMY245.xlsx"
 write.xlsx(wizards, file = save_path, rowNames = TRUE)
